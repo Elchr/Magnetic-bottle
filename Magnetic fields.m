@@ -71,9 +71,9 @@ rho_m2=sum(res(1:n,1))/(n*1000);
 
 figure(1)
 plot(res(:,1),res(:,3),'.k')
-xlabel('ρ (m)')
+xlabel('Γ± (m)')
 ylabel('z (m)')
-title('Διάγραμμα στο επίπεδο ρ-z ')
+title('Γ„Γ©ΓΓ£Γ±Γ΅Γ¬Γ¬Γ΅ Γ³Γ΄Γ― Γ¥Γ°ΓΓ°Γ¥Γ¤Γ― Γ±-z ')
 grid on
 %hold on
 %plot(rho_m,z_m,'.r')
@@ -83,18 +83,18 @@ grid on
 
 figure(2)
 plot3(res(:,1),res(:,2),res(:,3),'.k')
-xlabel('ρ (m)')
-ylabel('φ (deg)')
+xlabel('Γ± (m)')
+ylabel('Γ¶ (deg)')
 zlabel('z (m)')
-title('Διάγραμμα θέσεων σε κυλινδρικές συντεταγμένες')
+title('Cylindrical coordinates - Position')
 grid on
 
 figure(3)
 plot3(res(:,4),res(:,5),res(:,6),'.k')
-xlabel('pρ (kg m/sec)')
-ylabel('pφ (kg m^2/sec)')
+xlabel('pΓ± (kg m/sec)')
+ylabel('pΓ¶ (kg m^2/sec)')
 zlabel('pz (kg m/sec)')
-title('Διάγραμμα ορμών σε κυλινδρικές συντεταγμένες')
+title('Cylindrical coordinates - Momentum')
 grid on
 
 figure(4)
@@ -102,7 +102,7 @@ plot3(x(:,1),y(:,1),res(:,3),'.k')
 xlabel('x(m)')
 ylabel('y(m)')
 zlabel('z(m)')
-title('Διάγραμμα θέσεων σε καρτεσιανές συντεταγμένες')
+title('Cartesian coordinates - Position')
 grid on
 hold on
 plot3(x_m,y_m,z_m,'.r')
@@ -112,28 +112,28 @@ figure(5)
 plot(time,res(:,3),'.k')
 xlabel('t(sec)')
 ylabel('z(m)')
-title('Ταλαντωτική κίνηση σε μαγνητική φιάλη')
+title('Motion in magnetic bottle')
 grid on
 
 figure(6)
 plot(abs(rho_m),z_m,'.k')
-xlabel('<ρ>(m)')
+xlabel('<Γ±>(m)')
 ylabel('<z>(m)')
-title('Μέσες τιμές ανά γυροπερίοδο - Κυλινδρικές')
+title('Average values per period - Cylindrical')
 grid on
 
 figure(7)
 plot(rr,z_m,'.k')
-xlabel('<ρ>(m)')
+xlabel('<Γ±>(m)')
 ylabel('<z>(m)')
-title('Μέσες τιμές ανά γυροπερίοδο - Κυλινδρικές')
+title('Average values per period - Cylindrical')
 grid on
 figure(8)
 
 plot(x_m,z_m,'.k')
 xlabel('<x>(m)')
 ylabel('<z>(m)')
-title('Μέσες τιμές ανά γυροπερίοδο - Καρτεσιανές')
+title('Average values per period - Cartesian')
 grid on
 
 figure(9)
@@ -142,7 +142,7 @@ grid on
 xlabel('<x>(m)')
 ylabel('<y>(m)')
 zlabel('<z>(m)')
-title('Μέσες τιμές ανά γυροπερίοδο - Καρτεσιανές')
+title('Average values per period - Cartesian')
 
 logos=rg/(2*z0);
 s=(4*5^6-3*5^5)^(-1/4)
@@ -152,5 +152,5 @@ figure(10)
 plot(t_m,z_m,'.k')
 xlabel('t(sec)')
 ylabel('<z>(m)')
-title('Ταλαντωτική κίνηση σε μαγνητική φιάλη')
+title('Motion in magnetic bottle')
 grid on
